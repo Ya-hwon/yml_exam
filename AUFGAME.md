@@ -12,7 +12,7 @@ immer eine Methode aus dem Java-Objekt aufgerufen wird.
 
 a) Implementiere das in diesem Tutorial gezeigte Beispiel, indem Du das
    Tutorial vollständig nachvollziehst
-   https://eur03.safelinks.protection.outlook.com/?url=https%3A%2F%2Flinuxhint.com%2Fjni-tutorial%2F&amp;data=05%7C01%7Cmuellerj.tin20%40student.dhbw-heidenheim.de%7Ca217b1b4866a41e2d94308da96556766%7C645ff33ac1be4a33b9d972d8ac21246e%7C1%7C0%7C637987590801799446%7CUnknown%7CTWFpbGZsb3d8eyJWIjoiMC4wLjAwMDAiLCJQIjoiV2luMzIiLCJBTiI6Ik1haWwiLCJXVCI6Mn0%3D%7C3000%7C%7C%7C&amp;sdata=nkmb6r1Ikpk9WJW8AUke9CGvIrK4MrGn1wcEU%2FWFKM4%3D&amp;reserved=0
+   (https://linuxhint.com/jni-tutorial/)
 
 b) Abstrahiere ein Interface in Java und C++ für die vier Methoden und
    implementiere es einmal in Java und einmal in C++.
