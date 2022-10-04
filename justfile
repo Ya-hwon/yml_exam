@@ -1,3 +1,5 @@
+default:
+    just --list
 test:
     echo test
 java_compile:

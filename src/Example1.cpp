@@ -15,17 +15,19 @@ JNIEXPORT jstring JNICALL Java_Example1_stringMethodName(JNIEnv *env, jobject ob
     const char *str = env->GetStringUTFChars(string, 0);
     char cap[128];
     strcpy(cap, str);
-    env->ReleaseStringUTFChars(string, strupr(cap));
+    env->ReleaseStringUTFChars(string, str);
     return env->NewStringUTF(strupr(cap));
 }
 
-JNIEXPORT jint JNICALL Java_Example1_intMethodName(JNIEnv *env, jobject obj, jintArray array) {
-    int sum = 0;
+JNIEXPORT jint JNICALL Java_Example1_intArrayMethodName(JNIEnv *env, jobject obj, jintArray array) {
+    jint sum = 0;
     jsize len = env->GetArrayLength(array);
     jint *body = env->GetIntArrayElements(array, 0);
+
     for(int i = 0; i < len; i++) {
-        sum += body[i];
+        sum += ((int32_t*)body)[i];
     }
+
     env->ReleaseIntArrayElements(array, body, 0);
     return sum;
 }
