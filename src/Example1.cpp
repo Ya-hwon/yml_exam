@@ -7,8 +7,8 @@ JNIEXPORT jint JNICALL Java_Example1_intMethodName(JNIEnv *env, jobject obj, jin
     return num * num;
 }
 
-JNIEXPORT jboolean JNICALL Java_Example1_booleanMethodName(JNIEnv *env, jobject obj, jboolean boolean) {
-    return !boolean;
+JNIEXPORT jboolean JNICALL Java_Example1_booleanMethodName(JNIEnv *env, jobject obj, jboolean b) {
+    return !b;
 }
 
 JNIEXPORT jstring JNICALL Java_Example1_stringMethodName(JNIEnv *env, jobject obj, jstring string) {
@@ -31,5 +31,3 @@ JNIEXPORT jint JNICALL Java_Example1_intArrayMethodName(JNIEnv *env, jobject obj
     env->ReleaseIntArrayElements(array, body, 0);
     return sum;
 }
-
-int main(){}
