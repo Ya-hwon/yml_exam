@@ -1,0 +1,135 @@
+interface Interface {
+    fn I intMethodName(I n);
+    fn Z booleanMethodName(Z b);
+    fn S stringMethodName(S text);
+    fn I intArrayMethodName(AI intArray);
+}
+-> yml2proc
+
+<interface>
+  <Interface>
+    <fn>
+      <I>
+        <intMethodName>
+          <parm>
+            <I/>
+            <n/>
+          </parm>
+        </intMethodName>
+      </I>
+    </fn>
+    <fn>
+      <Z>
+        <booleanMethodName>
+          <parm>
+            <Z/>
+            <b/>
+          </parm>
+        </booleanMethodName>
+      </Z>
+    </fn>
+    <fn>
+      <S>
+        <stringMethodName>
+          <parm>
+            <S/>
+            <text/>
+          </parm>
+        </stringMethodName>
+      </S>
+    </fn>
+    <fn>
+      <I>
+        <intArrayMethodName>
+          <parm>
+            <AI/>
+            <intArray/>
+          </parm>
+        </intArrayMethodName>
+      </I>
+    </fn>
+  </Interface>
+</interface>
+--------------------------------------------
+decl interface @name;
+decl fn @ret @name;
+
+interface Interface {
+    fn I intMethodName(I n);
+    fn Z booleanMethodName(Z b);
+    fn S stringMethodName(S text);
+    fn I intArrayMethodName(AI intArray);
+}
+-> yml2proc
+
+<interface name="Interface">
+  <fn ret="I" name="intMethodName">
+    <parm>
+      <I/>
+      <n/>
+    </parm>
+  </fn>
+  <fn ret="Z" name="booleanMethodName">
+    <parm>
+      <Z/>
+      <b/>
+    </parm>
+  </fn>
+  <fn ret="S" name="stringMethodName">
+    <parm>
+      <S/>
+      <text/>
+    </parm>
+  </fn>
+  <fn ret="I" name="intArrayMethodName">
+    <parm>
+      <AI/>
+      <intArray/>
+    </parm>
+  </fn>
+</interface>
+
+include /.../.../....yml // eqiuvalent zu dem drüber
+
+interface Interface {
+    fn I intMethodName(I n);
+    fn Z booleanMethodName(Z b);
+    fn S stringMethodName(S text);
+    fn I intArrayMethodName(AI intArray);
+}
+-> yml2proc
+
+<interface name="fn">
+  <I>
+    <intMethodName>
+      <parm>
+        <I/>
+        <n/>
+      </parm>
+    </intMethodName>
+  </I>
+  <Z>
+    <booleanMethodName>
+      <parm>
+        <Z/>
+        <b/>
+      </parm>
+    </booleanMethodName>
+  </Z>
+  <S>
+    <stringMethodName>
+      <parm>
+        <S/>
+        <text/>
+      </parm>
+    </stringMethodName>
+  </S>
+  <I>
+    <intArrayMethodName>
+      <parm>
+        <AI/>
+        <intArray/>
+      </parm>
+    </intArrayMethodName>
+  </I>
+</interface>

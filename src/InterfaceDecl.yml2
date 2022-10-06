@@ -1,0 +1,8 @@
+include ./Interface.yml2
+
+interface Interface {
+    fn I intMethodName(I n);
+    fn Z booleanMethodName(Z b);
+    fn S stringMethodName(S text);
+    fn I intArrayMethodName(AI intArray);
+}

@@ -14,7 +14,7 @@ JNIEXPORT jboolean JNICALL Java_Example1_booleanMethodName(JNIEnv *env, jobject 
 JNIEXPORT jstring JNICALL Java_Example1_stringMethodName(JNIEnv *env, jobject obj, jstring string) {
     const char *str = env->GetStringUTFChars(string, 0);
     char cap[128];
-    strcpy(cap, str);
+    strcpy(cap, str); // if the str is > 128 chars this is ub btw
     env->ReleaseStringUTFChars(string, str);
     return env->NewStringUTF(strupr(cap));
 }

@@ -1,0 +1,10 @@
+include ./Interface.yml2
+
+textstylesheet {
+    template "interface"
+    ||
+    public interface «@name» { // todo everything
+
+    }
+    ||
+}
