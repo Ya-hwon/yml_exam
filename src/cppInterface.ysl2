@@ -1,0 +1,40 @@
+include ../../yml2/yml2/yslt.yml2
+include ./Interface.yml2
+
+tstylesheet {
+
+    template "interface"
+        ||
+        
+        #ifndef CPP_«@name»_H
+        #define CPP_«@name»_H
+
+        #include <vector>
+        #include <string>
+
+        class «@name» {
+        public:
+            `` apply "fn";
+        };
+
+        #endif
+        
+        ||
+
+    template "fn"
+        ||
+        virtual «@ret» «@name»(`apply "parm";`) = 0;
+        ||
+
+    template "parm"
+    choose {
+        when "@type='I'"
+            > const int «@name»
+        when "@type='Z'"
+            > const bool «@name»
+        when "@type='S'"
+            > const std::string& «@name»
+        when "@type='AI'"
+            > const std::vector<int>& «@name»
+    } 
+}
