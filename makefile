@@ -31,3 +31,12 @@ run: target\Example1.dll target\Example1.class
 
 clean:
 	cd target && rm ./* && cd ..
+
+
+###############################################################
+
+yml2_path = ~/gh/yml2
+
+interface_gen:
+	cd src && ${yml2_path}/yml2proc -y javaInterface.ysl2 InterfaceDecl.yml2 -o ../target/Interface.java && cd ..
+	cd src && ${yml2_path}/yml2proc -y cppInterface.ysl2 InterfaceDecl.yml2 -o ../target/Interface.h && cd ..

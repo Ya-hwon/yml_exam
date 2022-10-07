@@ -1,2 +1,3 @@
 decl interface @name;
 decl fn @ret @name;
+decl _parm @type @name;

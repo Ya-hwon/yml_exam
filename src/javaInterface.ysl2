@@ -1,0 +1,38 @@
+include ../../yml2/yml2/yslt.yml2
+include ./Interface.yml2
+
+tstylesheet {
+    template "interface"
+    ||
+
+    public interface «@name» {
+        `` apply "fn";
+    }
+
+    ||
+
+    template "fn"
+    choose {
+        when "@ret='I'"
+            | public int «@name»(`apply "parm";`);
+        when "@ret='Z'"
+            | public boolean «@name»(`apply "parm";`);
+        when "@ret='S'"
+            | public String «@name»(`apply "parm";`);
+        when "@ret='AI'"
+            | public int[] «@name»(`apply "parm";`);
+    }
+
+    template "parm"
+    choose {
+        when "@type='I'"
+            > final int «@name»
+        when "@type='Z'"
+            > final boolean «@name»
+        when "@type='S'"
+            > final String «@name»
+        when "@type='AI'"
+            > final int[] «@name»
+    } 
+    
+}
