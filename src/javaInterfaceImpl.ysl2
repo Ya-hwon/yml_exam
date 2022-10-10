@@ -4,7 +4,7 @@ include ./Interface.yml2
 tstylesheet {
     template "interface"
     ||
-    public interface «@name» {
+    public class «@name»Impl implements «@name» {
         `` apply "fn";
     }
     ||
@@ -12,13 +12,13 @@ tstylesheet {
     template "fn"
     choose {
         when "@ret='I'"
-            | public int «@name»(`apply "parm";`);
+            | public native int «@name»(`apply "parm";`);
         when "@ret='Z'"
-            | public boolean «@name»(`apply "parm";`);
+            | public native boolean «@name»(`apply "parm";`);
         when "@ret='S'"
-            | public String «@name»(`apply "parm";`);
+            | public native String «@name»(`apply "parm";`);
         when "@ret='AI'"
-            | public int[] «@name»(`apply "parm";`);
+            | public native int[] «@name»(`apply "parm";`);
     }
 
     template "parm"

@@ -16,7 +16,7 @@ b) Abstrahiere ein Interface in Java und C++ für die vier Methoden und implemen
 
 c) Verfasse eine Schnittstellenbeschreibung in YML2 als DSL, die die vier Methoden unabhängig von Java und C++ als Schnittstelle beschreibt. ✅
 
-d) Schreibe einen Generator, der das Java-Interface aus der DSL erzeugt, sowie einen Generator, der ein Java-Objekt erzeugt, was das Interface implementiert. Auf letzteres muss man dann javah anwenden können, um C++-Code zu erzeugen. 〰✅ inprogress
+d) Schreibe einen Generator, der das Java-Interface aus der DSL erzeugt, sowie einen Generator, der ein Java-Objekt erzeugt, was das Interface implementiert. Auf letzteres muss man dann javah anwenden können, um C++-Code zu erzeugen. ✅
 
 Bis hierher ist die Aufgabe mindestens zu lösen. Für Interessierte:
 

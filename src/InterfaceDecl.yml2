@@ -1,6 +1,6 @@
 include ./Interface.yml2
 
-interface Interface {
+interface GeneratedInterface {
     fn I intMethodName(I n);
     fn Z booleanMethodName(Z b);
     fn S stringMethodName(S text);

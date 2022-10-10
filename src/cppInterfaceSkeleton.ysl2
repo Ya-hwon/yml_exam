@@ -5,33 +5,24 @@ tstylesheet {
 
     template "interface"
         ||
-        #ifndef CPP_«@name»_H
-        #define CPP_«@name»_H
+        #include "./«@name».h"
 
-        #include <vector>
-        #include <string>
-
-        using std::vector;
-        using std::string;
-
-        class «@name» {
+        class «@name»Skeleton : «@name» {
         public:
             `` apply "fn";
         };
-
-        #endif
         ||
 
     template "fn"
     choose {
         when "@ret='I'"
-            | virtual int «@name»(`apply "parm";`) = 0;
+            | int «@name»(`apply "parm";`)  override {/*TODO*/}
         when "@ret='Z'"
-            | virtual bool «@name»(`apply "parm";`) = 0;
+            | bool «@name»(`apply "parm";`) override {/*TODO*/}
         when "@ret='S'"
-            | virtual string «@name»(`apply "parm";`) = 0;
+            | string «@name»(`apply "parm";`) override {/*TODO*/}
         when "@ret='AI'"
-            | virtual vector<int> «@name»(`apply "parm";`) = 0;
+            | vector<int> «@name»(`apply "parm";`) override {/*TODO*/}
     }
 
     template "parm"
