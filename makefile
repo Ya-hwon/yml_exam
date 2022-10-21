@@ -1,4 +1,4 @@
-target\Example1.h target\Example1.class: src\Example1.java
+target/Example1.h target/Example1.class: src/Example1.java
 	javac -h target -d target src/Example1.java
 
 # !care! the "-I${JAVA_HOME}/include/win32" is (as the name suggests) os dependent, change if needed, im not building os detection into this thing ^^
@@ -7,22 +7,22 @@ target\Example1.h target\Example1.class: src\Example1.java
 #		typedef long jint;
 # spoiler: long was not 32 bit on my windows machine =) - that was fun
 # + this isn't even guaranteed by the standard, it only guarantees a minimum bitwidth, please if you rely on an exact bitwidth use a guaranteed bitwidth type ^^ @whoever_built_this
-target\Example1.dll: target\Example1.h src\Example1.cpp
+target/Example1.dll: target/Example1.h src/Example1.cpp
 	g++ -c "-I${JAVA_HOME}/include" "-I${JAVA_HOME}/include/win32" src/Example1.cpp -o target/Example1.o
 	g++ -shared -o target/Example1.dll target/Example1.o -Wl,--add-stdcall-alias
 
 target/InterfaceImplTest.exe: src/InterfaceImplTest.cpp
 	g++ src/InterfaceImplTest.cpp -o target/InterfaceImplTest.exe
-target\Interface.class: src/Interface.java
+target/Interface.class: src/Interface.java
 	javac -d target src/Interface.java
 
 
 run_iitest_cpp: target/InterfaceImplTest.exe
 	target/InterfaceImplTest.exe
 
-build: target\Example1.dll target\Example1.class
+build: target/Example1.dll target/Example1.class
 
-run: target\Example1.dll target\Example1.class
+run: target/Example1.dll target/Example1.class
 	cd target && java Example1 && cd ..
 
 clean:
@@ -53,4 +53,4 @@ target/GeneratedInterfaceImpl.h: interface_gen
 
 ###############################################################
 
-all: build interface_gen target/InterfaceImplTest.exe target\Interface.class target/GeneratedInterfaceImpl.h
+all: build interface_gen target/InterfaceImplTest.exe target/Interface.class target/GeneratedInterfaceImpl.h
