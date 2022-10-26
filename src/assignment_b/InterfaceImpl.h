@@ -1,7 +1,7 @@
 #ifndef CPP_INTERFACE_IMPL_H
 #define CPP_INTERFACE_IMPL_H
 
-#include "../target/GeneratedInterface.h"
+#include "../../target/GeneratedInterface.h"
 #include <algorithm>
 
 using std::for_each;
