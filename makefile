@@ -32,7 +32,7 @@ run_iitest_java: target/assignment_b/java/InterfaceImplTest.class
 
 #assignment_d
 target/assignment_d:
-	mkdir target/assignment_d/ -p
+	mkdir -p target/assignment_d/
 
 target/assignment_d/GeneratedInterface.java: src/assignment_c/InterfaceDecl.yml2 src/assignment_d/javaInterface.ysl2 target/assignment_d
 	cd src && ${YML2_PATH}/yml2/yml2proc -y assignment_d/javaInterface.ysl2 assignment_c/InterfaceDecl.yml2 -o ../target/assignment_d/GeneratedInterface.java && cd ../.. 
@@ -45,7 +45,7 @@ buildD: target/assignment_d/GeneratedInterface.java target/assignment_d/Generate
 
 #assignment_e
 target/assignment_e/InterfaceImplTest.exe: src/assignment_e/InterfaceImplTest.cpp
-	mkdir target/assignment_e -p
+	mkdir -p target/assignment_e
 	g++ src/assignment_e/InterfaceImplTest.cpp -o target/assignment_e/InterfaceImplTest.exe 
 
 run_iitest_cpp: target/assignment_e/InterfaceImplTest.exe
@@ -53,7 +53,7 @@ run_iitest_cpp: target/assignment_e/InterfaceImplTest.exe
 
 #assignment_f
 target/assignment_f:
-	mkdir target/assignment_f/ -p
+	mkdir -p target/assignment_f/
 
 target/assignment_f/GeneratedInterface.h: src/assignment_c/InterfaceDecl.yml2 src/assignment_f/cppInterface.ysl2 target/assignment_f
 	cd src && ${YML2_PATH}/yml2/yml2proc -y assignment_f/cppInterface.ysl2 assignment_c/InterfaceDecl.yml2 -o ../target/assignment_f/GeneratedInterface.h && cd ../..
@@ -68,20 +68,8 @@ buildF: target/assignment_f/GeneratedInterface.h target/assignment_f/cppInterfac
 clean:
 	cd target && rm -r ./* && cd ..
 
-
-###############################################################
-
-# sollte der überordner von dem projekt hier sein, für linux sind die beiden identisch
-# in meinem Fall:
-# YML2_PATH=/cygdrive/d/Data/GHProj
-
 delete_yml2:
 	cd ${YML2_PATH} && rm -rf yml2
 
 clone_yml2:
 	cd ${YML2_PATH} && git clone https://gitea.pep.foundation/fdik/yml2.git
-
-
-
-
-###############################################################
