@@ -50,7 +50,7 @@ b) Abstrahiere ein Interface in Java und C++ für die vier Methoden und implemen
 ### Hinweise
 - Sollte hier nicht nur die Implementierung des abstrakten Interfaces für CPP gemeint sein sondern auch die Implementierung dessen Logik - dann siehe Implementierung in [Teilaufgabe e](#teilaufgabe-e)
 - Für das Java Interaface wurde zum abstrakten Interface direkt noch dessen [Logik Implentierung](/src/assignment_b/java/InterfaceImpl.java) sowie ein [dazugehöriger Test](./src/assignment_b/java/InterfaceImplTest.java) zum Testen der Funktionsfähigkeit implementiert. <br>
-(Für CPP erfolgt dieser Schritt in [Teilaufgabe e](/src/assignment_e/))
+(Für CPP erfolgt dieser Schritt in [Teilaufgabe e](#teilaufgabe-e))
 
 #### Make Befehle
 `make run_iitest_java`<br>
