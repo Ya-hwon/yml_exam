@@ -1,6 +1,6 @@
 #include <cstdint>
 typedef __int64_t __int64;
-#include "../../target/Example1.h"
+#include "../../target/assignment_a/Example1.h"
 #include <cstring>
 
 JNIEXPORT jint JNICALL Java_Example1_intMethodName(JNIEnv *env, jobject obj, jint num) {
