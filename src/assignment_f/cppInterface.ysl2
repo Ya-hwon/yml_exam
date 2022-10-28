@@ -1,5 +1,5 @@
 include ../../yml2/yml2/yslt.yml2
-include ./Interface.yml2
+include ./assignment_c/Interface.yml2
 
 tstylesheet {
 

@@ -1,4 +1,5 @@
-include ./Interface.yml2
+//all paths are relativ to working directory of yml2proc which is the src dir
+include ./assignment_c/Interface.yml2
 
 interface GeneratedInterface {
     fn I intMethodName(I n);

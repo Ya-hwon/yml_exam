@@ -1,12 +1,12 @@
 #ifndef CPP_INTERFACE_IMPL_H
 #define CPP_INTERFACE_IMPL_H
 
-#include "../target/GeneratedInterface.h"
+#include "../assignment_b/cpp/Interface.h"
 #include <algorithm>
 
 using std::for_each;
 
-class InterfaceImpl: GeneratedInterface {
+class InterfaceImpl: Interface {
 public:
     int intMethodName(const int n) {
         return n * n;

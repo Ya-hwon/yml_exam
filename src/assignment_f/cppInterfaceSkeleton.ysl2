@@ -1,5 +1,6 @@
+//all paths are relativ to working directory of yml2proc which is the src dir
 include ../../yml2/yml2/yslt.yml2
-include ./Interface.yml2
+include ./assignment_c/Interface.yml2
 
 tstylesheet {
 
