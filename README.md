@@ -12,7 +12,7 @@ make (auf windows über cygwin)
 
 g++ (auf windows über cygwin)
 
-JDK (recht egal welches, in meinem Fall openjdk 19)
+JDK (recht egal welches, wir haben openjdk 19 verwendet)
 
 yml2 in selben ordner wie yml_exam (erreichbar über `make clone_yml2`)
 
@@ -51,7 +51,7 @@ Führt das gebaute Java-Class-File aus.
 
 ### Teilaufgabe b)
 b) Abstrahiere ein Interface in Java und C++ für die vier Methoden und implementiere es einmal in Java und einmal in C++. <br>
-✅ Erledigt - [siehe src/assignment_a](/src/assignment_a/)<br>
+✅ Erledigt - [siehe src/assignment_b](/src/assignment_b/)<br>
 
 ### Hinweise
 - Sollte hier nicht nur die Implementierung des abstrakten Interfaces für CPP gemeint sein sondern auch die Implementierung dessen Logik - dann siehe Implementierung in [Teilaufgabe e](#teilaufgabe-e)
