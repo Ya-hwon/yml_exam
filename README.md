@@ -88,7 +88,7 @@ Kompiliert die .cpp und die .h Datei zu einer .exe und führt diese zum Testen d
 ### Teilaufgabe f)
 f) Schreibe einen Generator, der das C++-Interface sowie ein Skeleton implementiert, das man als C++-Programmierer nur noch ausfüllen muss. Ist damit e) einfacher zu lösen als vorher? <br>
 ✅ Erledigt - [siehe src/assignment_f](/src/assignment_f/)<br>
-Antwort: Ja, die Implementierung des Interfaces fällt leichter wenn ein Skeleton generiert wird, da nur noch die Logik implementiert werden muss und man sich den manuellen Aufbau der Struktur spart, ein Weiterer Vorteil besteht darin dass ein generiertes Skeleton garantiert passt (zumindest wenn richtig generiert), insbesondere wenn es aus der "Wahrheit" generiert wird (auf deren Korrektheit sich alle andere Komponenten verlassen), beim manuellen schreiben können Fehler passieren.
+Antwort: Ja, die Implementierung des Interfaces fällt leichter wenn ein Skeleton generiert wird, da nur noch die Logik implementiert werden muss und man sich den manuellen Aufbau der Struktur spart. Ein Weiterer Vorteil besteht darin dass ein generiertes Skeleton garantiert passt (zumindest wenn richtig generiert), insbesondere wenn es aus der "Wahrheit" generiert wird (auf deren Korrektheit sich alle andere Komponenten verlassen). Beim manuellen schreiben können Fehler passieren.
 #### Make Befehle
 `make buildF`<br>
 Generiert das CPP Interface sowie den Skeleton für die CPP Implementierung.
